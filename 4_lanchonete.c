@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
-//#include <ncurses.h> -> mais completa, porem é preciso compilar e configurar a biblioteca manualmente, caso queira usar no dev c++
+#include <stdlib.h> 
+//#include <ncurses.h> -> mais completa, porem Ã© preciso compilar e configurar a biblioteca manualmente, caso queira usar no dev c++
 
 void linha(){
 	printf("-------------------------------------\n");
@@ -15,16 +16,16 @@ int main(){
 do{
 	
 	linha();
-	printf("\t[TABELA DE PREÇOS]\n");
+	printf("\t[TABELA DE PREÃ‡OS]\n");
 	linha();
 	
 	printf("[100] - Cachorro quente........R$8,00\n");
 	printf("[101] - Bauru..................R$9,00\n");
 	printf("[102] - X-salada...............R$10,00\n");
-	printf("[103] - Hambúrguer.............R$8,00\n");
+	printf("[103] - HambÃºrguer.............R$8,00\n");
 	printf("[104] - Refrigerante(lata).....R$3,00\n\n");
 	
-	printf("Insira a opção desejada (uma por vez): ");
+	printf("Insira a opÃ§Ã£o desejada (uma por vez): ");
 	scanf("%i",&codigo);
 	
 	printf("Insira a quantidade: ");
@@ -53,19 +54,19 @@ do{
 			break;
 		default:
 			linha();
-			printf("Escolha uma opção válida!\n");
+			printf("Escolha uma opÃ§Ã£o vÃ¡lida!\n");
 			break;
 		
 		}
 
-	printf("\n\nDeseja continuar comprando?[1] Sim ou [2]Não:\n ");//teste usando caracter como tipo de escolha (SIM ou NÃO?)
+	printf("\n\nDeseja continuar comprando?[1] Sim ou [2]NÃ£o:\n ");//teste usando caracter como tipo de escolha (SIM ou NÃƒO?)
 	scanf("%d",&responde);
-	system("cls");//o problema do system("cls") é mais estético, cumpre com a função mas em é menos "suave" ao limpar a tela em comparação com o clrscr() da conio.h
+	system("cls");//o problema do system("cls") Ã© mais estÃ©tico, cumpre com a funÃ§Ã£o mas em Ã© menos "suave" ao limpar a tela em comparaÃ§Ã£o com o clrscr() da conio.h
 	
 	
 }while(responde == 1);
 	
-	printf("Obrigada pela preferência, volte sempre!");
+	printf("Obrigada pela preferÃªncia, volte sempre!");
 
 	
 	return(0);
